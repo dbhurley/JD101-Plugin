@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+	<name>PLG_CONTENT_LINKPROTECT</name>
+	<author>David Hurley</author>
+	<creationDate>November 2013</creationDate>
+	<copyright>Copyright 2013 David Hurley. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>david@websparkinc.com</authorEmail>
+	<authorUrl>www.websparkinc.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_CONTENT_LINKPROTECT_DESCRIPTION</description>
+	<files>
+		<filename plugin="linkprotect">linkprotect.php</filename>
+		<filename>index.html</filename>
+		<folder>helper</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.plg_content_linkprotect.ini</language>
+		<language tag="en-GB">language/en-GB.plg_content_linkprotect.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic"
+				addfieldpath="/administrator/components/com_content/models/fields">
+
+				<field
+					name="warning_page"
+					type="modal_article"
+					edit="true"
+					required="true"
+					clear="false"
+					label="PLG_CONTENT_LINKPROTECT_WARNINGPAGE_LABEL"
+					description="PLG_CONTENT_LINKPROTECT_WARNINGPAGE_DESC" 
+				/>
+				<field
+					name="new_window"
+					type="radio"
+					default="1"
+					class="btn-group btn-group-yesno"
+					label="PLG_CONTENT_LINKPROTECT_NEWTAB_LABEL"
+					description="PLG_CONTENT_LINKPROTECT_NEWTAB_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
